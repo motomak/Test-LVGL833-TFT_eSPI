@@ -16,12 +16,8 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
   - ILI9341 320x240 with touch<BR>
 <BR>
 
-**Problems and Countermeasures**<BR>
-　The touchX and touchY values output from TFT_eSPI are stretched.<BR>
-　The full scale value of the touch detection position is reversed in X and Y.<BR>
-　Originally, the touchX range was 0-320. The output of the calibration parameter detection program was also 0-320.<BR>
-　However, touchX outputs a range of 0 to 240, reflecting the Y range.<BR>
-　Similarly, the touchY output range is expanded from 0 to 320.<BR>
+**Problem**<BR>
+　The full scale value of the touch detection position output from TFT_eSPI are swapped among X and Y.<BR>
 <BR>
 
 **modification**<BR>
