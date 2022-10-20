@@ -1,27 +1,29 @@
 # Test-LVGL833-TFT_eSPI
-LVGL8.3.3を使った時に、TFT_eSPIの出力座標がおかしくなる事を確認するためのプログラムです。<BR>
+This program is to confirm that the output coordinates of TFT_eSPI are wrong when using LVGL8.3.3.
 <BR>
-**機能**<BR>
-　タッチした座標の検出結果をシリアルポートに出力します。<BR>
-　画面には何も表示しません。真っ白です。<BR>
-**環境**<BR>
+<BR>
+**Feature**<BR>
+　Outputs the detection result of touched coordinates to the serial port.
+<BR>
+　Nothing is displayed on the screen. It is blank.<BR>
+**environment**<BR>
 　LVGL 8.3.3<BR>
 　TFT_eSPI<BR>
 　ArduinoIDE 1.8.19<BR>
 　ESP32<BR>
 　ILI9341 320x240 with touch<BR>
-**問題と対策**<BR>
-　TFT_eSPIから出力される touchX,touchY の値が伸縮されて出力されます。<BR>
-　その問題点を補正しています。プログラムの26〜27行目が該当する箇所です。<BR>
-**詳細**<BR>
-　タッチ検出位置のフルスケール値が、X,Yが逆になっています。<BR>
-　本来はtouchXは0〜320であり、TFT_eSPIのキャリブレーションパラメータ検出プログラムの出力もそうなっています。<BR>
-　しかし、touchXは0〜240の範囲で出力されます。Yの範囲が反映されています。<BR>
-　同様にtouchYの出力範囲も0〜320に拡大されています。<BR>
-　プログラムの26〜27行目が該当する箇所で、XとYのフルスケール比で補正すれば正しい値が得られています。<BR>
-**補足**<BR>
-　lv_arduino3.0.1を使うと正しい座標が得られます。<BR>
-　TFT_eSPIのcalData出力プログラム"Touch_calibrate"からの座標出力も正しい値が得られます。<BR>
-　LVGL8.3.3を使うと座標が伸縮されます。<BR>
-　しかし、伸縮された座標が出力されているのはTFT_eSPIからの座標出力の部分です。<BR>
-　不可解です。
+**Problems and Countermeasures**<BR>
+　The touchX and touchY values output from TFT_eSPI are decompressed and output.<BR>
+　The problem is corrected. Lines 26-27 of the program are the relevant sections.<BR>
+**Details**<BR>
+　The full scale value of the touch detection position is reversed in X and Y.<BR>
+　Originally, the touchX range was 0-320. The output of the calibration parameter detection program was also 0-320.<BR>
+　However, touchX outputs a range of 0 to 240, reflecting the Y range.<BR>
+　Similarly, the touchY output range is expanded from 0 to 320.<BR>
+　Lines 26-27 of the program are the relevant sections.Correcting for the full scale ratio of X and Y results in the correct value.<BR>
+<BR>
+　Using lv_arduino3.0.1, I got the correct coordinates.<BR>
+　The coordinate output from the program "Touch_calibrate" (TFT_eSPI) to get the calData also has the correct values.<BR>
+　Coordinates were expanded only when using LVGL 8.3.3.<BR>
+　However, the stretched coordinates are output from TFT_eSPI.<BR>
+　It is inexplicable.
