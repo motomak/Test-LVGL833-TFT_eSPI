@@ -24,8 +24,8 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
 <BR>
 
 **modification**<BR>
-  Lines 26-27 of the program are the relevant sections.<BR>
-  Correcting the full scale values of X and Y.<BR>
+　Lines 26-27 of the program are the relevant sections.<BR>
+　Correcting the full scale values of X and Y.<BR>
 <BR>
 
 **checks**<BR>
