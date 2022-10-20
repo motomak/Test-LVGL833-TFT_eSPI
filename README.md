@@ -20,15 +20,15 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
 　The full scale value of the touch detection position output from TFT_eSPI are swapped among X and Y.<BR>
 <BR>
 
-**modification**<BR>
-　Lines 26-27 of the program<BR>
-　Correcting the full scale values of X and Y.<BR>
-<BR>
-
 **checks**<BR>
   - Using <a href="https://github.com/lvgl/lv_arduino">lv_arduino3.0.1</a>, TFT_eSPI output the correct coordinates.<BR>
   - Using <a href="https://github.com/Bodmer/TFT_eSPI/blob/master/examples/Generic/Touch_calibrate/Touch_calibrate.ino">Touch_calibrate</a>" (TFT_eSPI), TFT_eSPI output the correct coordinates.<BR>
   - The full scale X,Y values are swapped when using LVGL 8.3.3.<BR>
 <BR>
+
+**modification**<BR>
+　Lines 26-27 of the program. It correct the full scale values of X and Y.<BR>
+<BR>
+
 However, the stretched coordinates are output from TFT_eSPI.<BR>
 It is inexplicable.
