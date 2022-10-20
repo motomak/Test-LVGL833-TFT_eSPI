@@ -23,7 +23,7 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
 **checks**<BR>
   - Using <a href="https://github.com/lvgl/lv_arduino">lv_arduino3.0.1</a>, TFT_eSPI output the correct coordinates.<BR>
   - Using <a href="https://github.com/Bodmer/TFT_eSPI/blob/master/examples/Generic/Touch_calibrate/Touch_calibrate.ino">Touch_calibrate</a>" (TFT_eSPI), TFT_eSPI output the correct coordinates.<BR>
-  - The full scale X,Y values are swapped when using LVGL 8.3.3.<BR>
+  - Using <a href="https://github.com/lvgl/lvgl">LVGL 8.3.3</a>, the X,Y full scale values are swapped<BR>
 <BR>
 
 **modification**<BR>
