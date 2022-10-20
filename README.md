@@ -27,5 +27,6 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
   - Using <a href="https://github.com/lvgl/lv_arduino">lv_arduino3.0.1</a>, I got the correct coordinates.<BR>
   - The coordinate output from the program "<a href="https://github.com/Bodmer/TFT_eSPI/blob/master/examples/Generic/Touch_calibrate/Touch_calibrate.ino">Touch_calibrate</a>" (TFT_eSPI) to get the calData also has the correct values.<BR>
   - Coordinates were expanded when using LVGL 8.3.3.<BR>
-　However, the stretched coordinates are output from TFT_eSPI.<BR>
-　It is inexplicable.
+  <BR>
+However, the stretched coordinates are output from TFT_eSPI.<BR>
+It is inexplicable.
