@@ -13,7 +13,7 @@ This program is to confirm that the output coordinates of TFT_eSPI are wrong whe
 　ESP32<BR>
 　ILI9341 320x240 with touch<BR>
 **Problems and Countermeasures**<BR>
-　The touchX and touchY values output from TFT_eSPI are decompressed and output.<BR>
+　The touchX and touchY values output from TFT_eSPI are stretched.<BR>
 　The problem is corrected. Lines 26-27 of the program are the relevant sections.<BR>
 **Details**<BR>
 　The full scale value of the touch detection position is reversed in X and Y.<BR>
